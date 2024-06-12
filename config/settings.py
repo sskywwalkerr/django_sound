@@ -1,4 +1,4 @@
-import os.path
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'drf_yasg',
 
     'src.oauth',
+
 ]
 
 MIDDLEWARE = [
@@ -69,8 +70,12 @@ WSGI_APPLICATION = 'src.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'sound',
+        'USER': 'postgres',
+        'PASSWORD': '272371rad',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
